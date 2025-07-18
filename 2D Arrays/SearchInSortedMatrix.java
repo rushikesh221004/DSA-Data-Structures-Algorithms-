@@ -11,6 +11,10 @@ public class SearchInSortedMatrix {
         return false;
     }
 
+    public static boolean searchMatrixBinary(int[][] matrix, int target) {
+        return false;
+    }
+
     public static void main(String[] args) {
         int[][] matrix = {
                 { 1, 3, 5 },
