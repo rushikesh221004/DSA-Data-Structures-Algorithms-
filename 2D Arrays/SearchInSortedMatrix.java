@@ -28,6 +28,21 @@ public class SearchInSortedMatrix {
         return false;
     }
 
+    public static boolean searchMatrixOptimal(int matrix[][], int target) {
+        int row = 0;
+        int col = matrix[0].length-1;
+        while(row < matrix.length && col >= 0) {
+            if(matrix[row][col] == target) {
+                return true;
+            } else if(matrix[row][col] > target) {
+                col--;
+            } else {
+                row++;
+            }
+        }
+        return false;
+    } 
+
     public static void main(String[] args) {
         int[][] matrix = {
                 { 1, 3, 5 },
