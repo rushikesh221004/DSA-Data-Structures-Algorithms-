@@ -15,11 +15,14 @@ public class LongestCommonPrefix {
                     break;
                 }
             }
+            if(longestPrefix.length() == 0) {
+                break;
+            }
         }
         System.out.print(longestPrefix);
     }
     public static void main(String[] args) {
-        String[] str = {"flair", "flow", "flight"};
+        String[] str = {"abcde", "abc", "abf"};
 
         longestCommonPrefix(str);
     }
