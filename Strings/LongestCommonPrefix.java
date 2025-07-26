@@ -1,5 +1,6 @@
 public class LongestCommonPrefix {
-    public static void longestCommonPrefix(String[] str) {
+    public static String longestCommonPrefix(String[] str) {
+        if(str.length == 1) return str[0];
         int minLength = Integer.MAX_VALUE;
         for(int i = 0; i < str.length; i++) {
             minLength = Math.min(minLength, str[i].length());
@@ -19,11 +20,11 @@ public class LongestCommonPrefix {
                 break;
             }
         }
-        System.out.print(longestPrefix);
+        return longestPrefix.toString();
     }
     public static void main(String[] args) {
-        String[] str = {"abcde", "abc", "abf"};
+        String[] str = {"abcde"};
 
-        longestCommonPrefix(str);
+        System.out.println(longestCommonPrefix(str));
     }
 }
